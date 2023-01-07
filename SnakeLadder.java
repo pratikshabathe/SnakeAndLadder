@@ -12,7 +12,6 @@ public class SnakeLadder {
         int condition = 10;
 
         while (condition > 0) {
-        	
             int options = (int) (Math.random() * 3 + 1);
             System.out.println("option is " +options);
             int dice_roll = (int) (Math.random() * 6 + 1);
@@ -39,7 +38,13 @@ public class SnakeLadder {
             } else {
                 System.out.println("roll dice again");
             }
+
             System.out.println("step count is " +Step_Count);
+            int Previous_Step_Count = Step_Count;
+
+            if(Step_Count>100) {
+                Step_Count = Previous_Step_Count;
+            }
 
             System.out.println("-------------------------");
 
@@ -52,3 +57,4 @@ public class SnakeLadder {
         }
     }
 }
+
